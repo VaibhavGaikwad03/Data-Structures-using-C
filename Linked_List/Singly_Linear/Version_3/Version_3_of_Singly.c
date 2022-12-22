@@ -373,7 +373,6 @@ int main()
 
     while(1)
     {
-        out:
         fflush(stdin);
         printf("\nHello, Welcome...\nPlease choose from the below options : \n\n");
         printf("1. Insert\n2. Delete\n3. Search\n4. Reverse\n5. Count\n6. Concat\n7. Exit\n");
@@ -693,7 +692,8 @@ int main()
                 break;
 
                 case 6:
-                    while(1)
+                    bFlag = TRUE;
+                    while(bFlag)
                     {   
                         fflush(stdin);
                         printf("\nPlease choose from the below options :\n");
@@ -810,6 +810,7 @@ int main()
                                             printf("\nPlease enter only integer values. Non-integer values will cause errors in the program.\n");
                                         }
                                     }
+                                    bFlag = TRUE;
                                 break;
 
                                 case 2:
@@ -926,11 +927,12 @@ int main()
                                                 printf("\nPlease enter only integer values. Non-integer values will cause errors in the program.\n");
                                             }
                                         }
+                                        bFlag = TRUE;
                                     }
                                 break;
 
                                 case 3:
-                                    goto out;
+                                    bFlag = FALSE;
                                 break;
 
                                 default:
