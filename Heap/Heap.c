@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+
+
+
+
+
+
+
 void insert(int H[], int n)
 {
     int i = n, temp;
