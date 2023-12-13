@@ -18,6 +18,9 @@ int delete(int H[], int n)
     int i, j, x, temp, val = H[i];
     x = H[n];
     H[1] = H[n];
+    
+    H[n] = val;
+    
     i = 1;
     j = i * 2;
 
@@ -36,6 +39,7 @@ int delete(int H[], int n)
         else
             break;
     }
+    return val;
 }
 
 void create_heap()
@@ -49,6 +53,16 @@ int main(void)
 
     for (int i = 2; i <= 7; i++)
         insert(H, i);
+
+    delete (H, 7);
+    delete (H, 6);
+    delete (H, 5);
+    delete (H, 4);  
+    delete (H, 3);
+    delete (H, 2);
+
+    for (int i = 1; i <= 7; i++)
+        printf("%d ", H[i]);
 
     return 0;
 }
