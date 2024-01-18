@@ -8,6 +8,36 @@ struct node
     struct node *right;
 };
 
+void preorder(struct node *p)
+{
+    if (p)
+    {
+        printf("%d ", p->data);
+        preorder(p->left);
+        preorder(p->right);
+    }
+}
+
+void inorder(struct node *p)
+{
+    if (p)
+    {
+        inorder(p->left);
+        printf("%d ", p->data);
+        inorder(p->right);
+    }
+}
+
+void postorder(struct node *p)
+{
+    if (p)
+    {
+        postorder(p->left);
+        postorder(p->right);
+        printf("%d ", p->data);
+    }
+}
+
 void create(struct node **root)
 {
     int x;
@@ -67,6 +97,18 @@ int main(void)
     struct node *root = NULL;
 
     create(&root);
+
+    printf("\nPreorder traversal: ");
+    preorder(root);
+    printf("\n");
+
+    printf("\nInorder traversal: ");
+    inorder(root);
+    printf("\n");
+
+    printf("\nPostorder traversal: ");
+    postorder(root);
+    printf("\n");
 
     return 0;
 }
