@@ -1,3 +1,6 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include <malloc.h>
 #include <stdbool.h>
 
@@ -12,3 +15,5 @@ void display(struct qnode *head);
 bool is_empty(struct qnode *head);
 void enqueue(struct qnode **head, struct node *data);
 struct node *dequeue(struct qnode **head);
+
+#endif // QUEUE_H
