@@ -21,7 +21,7 @@ void display(struct qnode *head)
     }
     printf("NULL\n");
 }
-
+ 
 bool is_empty(struct qnode *head)
 {
     if (head == NULL)
